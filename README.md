@@ -1,4 +1,5 @@
 # richi-web
 My own web, with my contacts, about me page..
 
-WEB IS OUT OF SERVICE, I AM WORKING ON BETTER VERSION.
+Web is out of service, I am working on better version.
+Web is online, but only alpha version.
