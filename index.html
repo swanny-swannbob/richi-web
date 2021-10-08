@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Richi</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .welcome-text {
+            margin-top: 20%;
+            margin-left: auto;
+            margin-right: 50%;
+            font-size: 30px;
+            font-weight: 600;
+            width: 30%;
+            padding: 3px;
+        }
+
+        .logo img{
+            animation: logo-animation 1.3s linear;
+            transform: scale(0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 17%;
+            left: 60%;
+        }
+
+        .footer {
+            position: fixed;
+            top: 94%;
+            padding: 1%;
+            background-color: rgb(5, 5, 5);
+            color: rgb(59, 59, 59);
+            width: 100%;
+            text-align: center;
+        }
+
+        .name-colored {
+            color: #ef5350;
+            opacity: 0;
+            animation: rainbow-text 5s infinite;
+        }
+
+        .name-colored:nth-child(2) {
+            animation-delay: 100ms;
+        }
+
+        .name-colored:nth-child(3) {
+            animation-delay: 200ms;
+        }
+
+        .name-colored:nth-child(4) {
+            animation-delay: 300ms;
+        }
+
+        .name-colored:nth-child(5) {
+            animation-delay: 400ms;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            opacity: 70%;
+            transition: all 0.3s;
+        }
+
+        @keyframes logo-animation {
+            0% {
+                opacity: 0;
+                top: 27%;
+            }
+
+            100% {
+                opacity: 1;
+                top: 17%;
+            }
+        }
+
+        @keyframes rainbow-text {
+            0% {
+                opacity: 0.4;
+            }
+
+            9% {
+                color: #ef5350;
+            }
+
+            10% {
+                opacity: 1;
+                color: #f78f19;
+            }
+
+            20% {
+                color: #fffb1f;
+            }
+
+            30% {
+                color: #39ab48;
+            }
+
+            40% {
+                color: #067c1a; 
+            }
+
+            50% {
+                color: #44a0dd;
+            }
+            
+            60% {
+                color: #3647aa;
+            }
+
+            70% {
+                color: #ec00cd;
+            }
+
+            80% {
+                color: #8b0079;
+            }
+
+            90% {
+                color: #fff;
+            }
+        }
+
+        .junior {
+            color: #f565e2;
+        }
+
+        .contact {
+            margin-top: 10%;
+            text-align: center;
+        }
+
+        i {
+            font-size: 30px;
+            margin: 15px;
+        }
+
+        btn {
+            border: none;
+        }
+
+        .progress-bar {
+            background: #111;
+            border-radius: 13px;
+            height: 10px;
+            width: 70%;
+            padding: 3px;
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+
+        .progress-content {
+            content: '';
+            display: block;
+            background: rgb(0, 140, 255);
+            width: 50%;
+            height: 100%;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-text">
+        Hello, my name is <span class="letter name-colored">R</span><span class="letter name-colored">i</span><span class="letter name-colored">c</span><span class="letter name-colored">h</span><span class="letter name-colored">i</span><br>
+        I am <span class="junior">Junior</span> Developer.</span>
+    </div>
+
+    <div class="logo">
+        <img src="assets/richi-logo.png" alt="">
+    </div>
+
+
+    <div class="skills" id="skills">
+
+    </div>
+
+    <div class="contact" id="contact">
+        <hr style="opacity: 0.5; width: 10%;">
+        <h2 style="text-align: center;">
+            Contact
+        </h2>
+        E-mail: <strong>richi@ourcrew.eu</strong><br>
+        Discord: <strong>ØurƦichi#6262</strong> <br>
+        <a href="https://github.com/OurRichi/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a><a href="https://tiktok.com/@ourrichi_mc?" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://instagram.com/ourrichi_mc/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div> <br>
+
+    <div class="skills" id="skills">
+        <hr style="opacity: 0.5; width: 10%;">
+        <h2 style="text-align: center;">
+            Skills
+        </h2>
+        <span style="left: 10%; position: relative;">HTML5 (70%) <div class="progress-bar"><div class="progress-content" style="width: 70%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">Java (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">CSS3 (50%) <div class="progress-bar"><div class="progress-content" style="width: 50%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">JavaScript (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">Node.JS (30%) <div class="progress-bar"><div class="progress-content" style="width: 30%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">MySQL (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
+        <span style="left: 10%; position: relative;">Debian (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span>
+        <br><br><br><br><br><br><br>
+    </div>
+
+    <div class="footer">
+        Made by <strong>OurRichi</strong> | Inspired by <a href="https://jacekjeznach.com/" target="_blank" rel="noopener noreferrer">jacekjeznach.com/</a> | Made with <strong>Font-Awesome</strong> & <strong>JQuery</strong>
+    </div>
+</body>
+</html>
