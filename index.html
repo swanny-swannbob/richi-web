@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Oficiální web OurRichi">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Richi</title>
     <script src="script.js"></script>
@@ -47,7 +48,6 @@
 
         .name-colored {
             color: #ef5350;
-            opacity: 0;
             animation: rainbow-text 5s infinite;
         }
 
@@ -92,10 +92,6 @@
 
         @keyframes rainbow-text {
             0% {
-                opacity: 0.4;
-            }
-
-            9% {
                 color: #ef5350;
             }
 
@@ -133,7 +129,7 @@
             }
 
             90% {
-                color: #fff;
+                color: #ef5350;
             }
         }
 
@@ -174,6 +170,165 @@
             height: 100%;
             border-radius: 9px;
         }
+
+        @media only screen and (max-width: 728px) {
+            body {
+                overflow:hidden;
+            }
+
+            .welcome-text {
+                margin-top: 20%;
+                margin-left: 10%;
+                font-size: 30px;
+                font-weight: 600;
+                width: 90%;
+                display: block;
+            }
+
+            .logo img{
+                animation: logo-animation 1.3s linear;
+                transform: scale(0.5);
+                border-radius: 50%;
+                position: relative;
+                left: -12%; 
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .name-colored {
+                color: #ef5350;
+                opacity: 0;
+                animation: rainbow-text 5s infinite;
+            }
+
+            .name-colored:nth-child(2) {
+                animation-delay: 100ms;
+            }
+
+            .name-colored:nth-child(3) {
+                animation-delay: 200ms;
+            }
+
+            .name-colored:nth-child(4) {
+                animation-delay: 300ms;
+            }
+
+            .name-colored:nth-child(5) {
+                animation-delay: 400ms;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                opacity: 70%;
+                transition: all 0.3s;
+            }
+
+            @keyframes logo-animation {
+                0% {
+                    opacity: 0;
+                    top: 27%;
+                }
+
+                100% {
+                    opacity: 1;
+                    top: 17%;
+                }
+            }
+
+            @keyframes rainbow-text {
+                0% {
+                    color: #ef5350;
+                }
+
+                10% {
+                    opacity: 1;
+                    color: #f78f19;
+                }
+
+                20% {
+                    color: #fffb1f;
+                }
+
+                30% {
+                    color: #39ab48;
+                }
+
+                40% {
+                    color: #067c1a; 
+                }
+
+                50% {
+                    color: #44a0dd;
+                }
+                
+                60% {
+                    color: #3647aa;
+                }
+
+                70% {
+                    color: #ec00cd;
+                }
+
+                80% {
+                    color: #8b0079;
+                }
+
+                90% {
+                    color: #ef5350;
+                }
+            }
+
+            .junior {
+                color: #f565e2;
+            }
+
+            .contact {
+                margin-top: 5%;
+                text-align: center;
+                margin-left: 10%;
+            }
+
+            .skills {
+                margin-top: 5%;
+                margin-left: 10%;
+            }
+
+            i {
+                font-size: 30px;
+                margin: 15px;
+            }
+
+            btn {
+                border: none;
+            }
+
+            .progress-bar {
+                background: #111;
+                border-radius: 13px;
+                height: 10px;
+                width: 70%;
+                padding: 3px;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
+            }
+
+            .progress-content {
+                content: '';
+                display: block;
+                background: rgb(0, 140, 255);
+                width: 50%;
+                height: 100%;
+                border-radius: 9px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -206,18 +361,14 @@
         <h2 style="text-align: center;">
             Skills
         </h2>
-        <span style="left: 10%; position: relative;">HTML5 (70%) <div class="progress-bar"><div class="progress-content" style="width: 70%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">Java (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">CSS3 (50%) <div class="progress-bar"><div class="progress-content" style="width: 50%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">JavaScript (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">Node.JS (30%) <div class="progress-bar"><div class="progress-content" style="width: 30%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">MySQL (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
-        <span style="left: 10%; position: relative;">Debian (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span>
+        <span style="left: 13%; position: relative;">HTML (70%) <div class="progress-bar"><div class="progress-content" style="width: 70%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">Java (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">CSS3 (50%) <div class="progress-bar"><div class="progress-content" style="width: 50%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">JS (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">Node (30%) <div class="progress-bar"><div class="progress-content" style="width: 30%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">SQL (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
+        <span style="left: 13%; position: relative;">Linux (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span>
         <br><br><br><br><br><br><br>
-    </div>
-
-    <div class="footer">
-        Made by <strong>OurRichi</strong> | Inspired by <a href="https://jacekjeznach.com/" target="_blank" rel="noopener noreferrer">jacekjeznach.com/</a> | Made with <strong>Font-Awesome</strong> & <strong>JQuery</strong>
     </div>
 </body>
 </html>
