@@ -25,6 +25,7 @@
             font-weight: 600;
             width: 30%;
             padding: 3px;
+            transition: all 0.3s;
         }
 
         .logo img{
@@ -46,17 +47,76 @@
             text-align: center;
         }
 
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 24px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: #16c016;
+        }
+
+        input:focus + .slider {
+        box-shadow: 0 0 1px #16c016;
+        }
+
+        input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        }
+
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+
         .name-colored {
             color: #ef5350;
-            animation: rainbow-text 5s infinite;
+            animation: rainbow-text 2s infinite;
         }
 
         .name-colored:nth-child(2) {
-            animation-delay: 100ms;
+            animation-delay: 500ms;
         }
 
         .name-colored:nth-child(3) {
-            animation-delay: 200ms;
+            animation-delay: 900ms;
         }
 
         .name-colored:nth-child(4) {
@@ -74,7 +134,7 @@
         }
 
         a:hover {
-            opacity: 70%;
+            animation: rainbow-text 2s infinite;
             transition: all 0.3s;
         }
 
@@ -133,8 +193,18 @@
             }
         }
 
+        @keyframes blast {
+            0% {
+                font-size: 34px;
+            }
+            
+            100% {
+                font-size: 30px;
+            }
+        }
+
         .junior {
-            color: #f565e2;
+            animation: rainbow-text 3s infinite;
         }
 
         .contact {
@@ -323,7 +393,7 @@
             .progress-content {
                 content: '';
                 display: block;
-                background: rgb(0, 140, 255);
+                background: rgb(102, 197, 13);
                 width: 50%;
                 height: 100%;
                 border-radius: 9px;
@@ -331,7 +401,35 @@
         }
     </style>
 </head>
-<body>
+<script>
+    var rainbow = localStorage.getItem("rainbow")
+
+    function replaceRainbow() {
+        if(rainbow === "false") {
+            localStorage.setItem("rainbow", "true")
+        } else if(rainbow === "true") {
+            localStorage.setItem("rainbow", "false")
+        }
+    }
+
+    function rainbowSettings() {   
+        if(rainbow === "false") {
+            var x = document.getElementsByClassName("name-colored");
+            var i;
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.animation = "none";
+                x[i].style.color = "#fff";
+            }
+
+            var junior = document.getElementsByClassName("junior")[0].style.animation = "none";
+            junior[0].style.color = "#fff";
+        } else if(rainbow === "true") {
+            $('#rainbow-switch').prop('checked', true);
+        }
+    }
+</script>
+<body onload="rainbowSettings()">
     <div class="welcome-text">
         Hello, my name is <span class="letter name-colored">R</span><span class="letter name-colored">i</span><span class="letter name-colored">c</span><span class="letter name-colored">h</span><span class="letter name-colored">i</span><br>
         I am <span class="junior">Junior</span> Developer.</span>
@@ -369,6 +467,15 @@
         <span style="left: 13%; position: relative;">SQL (40%) <div class="progress-bar"><div class="progress-content" style="width: 40%;"></div></div></span><br>
         <span style="left: 13%; position: relative;">Linux (20%) <div class="progress-bar"><div class="progress-content" style="width: 20%;"></div></div></span>
         <br><br><br><br><br><br><br>
+    </div>
+
+    <div class="footer">
+        Rainbow text? &nbsp;
+
+        <label class="switch">
+            <input type="checkbox" id="rainbow-switch" onclick="replaceRainbow()">
+            <span class="slider round"></span>
+        </label>
     </div>
 </body>
 </html>
